@@ -34,17 +34,20 @@
         
         <h1>Stay updated!</h1>
 
-        <p>Join 60,000+ product managers receiving monthly updates on:</p>
+        <p>Join 60,000+ product managers  receiving<br> monthly updates on:</p>
         <div><img src="assets/images/icon-list.svg" /> <p>Product discovery and building what matters</p></div>
         <div><img src="assets/images/icon-list.svg" /><p> Measuring to ensure updates are a success</p></div>
         <div> <img src="assets/images/icon-list.svg" /><p> And much more!</p></div>
 
         
-       
-        <label for="email">Email address</label>
-        <input type="email" name="email" value="" placeholder="email@company.com"/>
+       <div class="two">
+        <label class="subemail" for="email">Email address</label>
+        <input id="email" class="email" type="email" name="email" value="" placeholder="email@company.com"/>
+        <small id="textEmail"></small>
 
-        <input id="button" type="button" value="Subscribe to monthly newsletter" />
+        <button id="button" type="submit">Subscribe to monthly newsletter</button>
+     </div>
+
 </div>
         <img id="screenimage" src="assets/images/illustration-sign-up-desktop.svg" alt="complementary image"><!-- Sign-up form end -->
 
@@ -61,5 +64,6 @@
         </div>
       </div>
     </div>
+    <script src="main.js"></script>
     </body>
 </html>
