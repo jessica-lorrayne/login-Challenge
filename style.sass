@@ -54,38 +54,56 @@ form
         font-size: 10px
         display: block
 
-    .form-input
+    .form_input
         width: 100%
         padding-left: 14px
         height: 44px
         border-radius: 6px
-        border: 1px solid hsla(235, 18%, 26%, 0.332)
+        border: #cccccc 1px solid 
+
 
         &::placeholder
             opacity: 0.5
+            color: #000000
 
         &:focus
             outline: none
         
+    .error
+        width: 100%
+        padding-left: 14px
+        height: 44px
+        border-radius: 6px
+        background-color:#ff6b63
+        color: #000000
+        border: #ff0000 1px solid
+
+        &:placeholder
+            color: #ffffff
+        
+        &:focus
+            outline: none
 
 
-
-    #textEmail
+    #textEmail,
+    #textError
         font-weight: 500
-        color: #ba0505
+        color: #3a1e1d
+
 
     #button
         width: 100%
-        color: #fff
+        color: #9f9f9f
         background-color: rgba(54, 56, 78, 0.773)
-        transition: 0.3s
+        transition: 0.5s
         height: 2.4rem
         border-radius: 6px
         border: none
+        cursor: pointer
 
         &:hover
-            height: 5.5vh
-            background-color: rgb(45, 48, 89)
+            color:#fff
+            background-color: rgb(34, 38, 103)
 .modal
     position: absolute
     z-index: 1
@@ -95,8 +113,6 @@ form
     border-radius: 15px
     padding: 38px
     
-
-
     .icon_correct
         width: 14%
 
@@ -109,7 +125,7 @@ form
         margin-top: 10px
 
 .footer_modal
-    margin-top: 15px
+    margin-top: 25px
     display: flex
     align-items: center
     text-align: center
@@ -136,20 +152,27 @@ form
         -webkit-user-select: none
         touch-action: manipulation
         vertical-align: middle
+        transition: .5s
 
 
-        .button_24:hover,
-        .button_24:active 
-        background-color: initial
-        background-position: 0 0
-        color: #FF4742
+        &:hover,
+        &:active 
+            background-color: initial
+            background-position: 0 0
+            color: #FF4742
 
 
-        .button_24:active 
-        opacity: .8
+        &:active 
+            opacity: .8
 
-
-   
+.attribution
+    display: flex
+    align-items: flex-end
+    position: absolute
+    height: 100vh
+    margin-bottom: 30px
+    color: #fff
+    
 /* Responsive */
 
 @media screen and (max-width: 850px)
