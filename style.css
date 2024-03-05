@@ -113,14 +113,29 @@ form #button:hover {
   background-color: rgb(34, 38, 103);
 }
 
+#blur {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.2px);
+  -webkit-backdrop-filter: blur(5.2px);
+}
+
 .modal {
+  display: none;
   position: absolute;
   z-index: 1;
   background-color: #fff;
-  width: 22vw;
-  height: 52vh;
+  width: 360px;
+  height: 400px;
   border-radius: 15px;
   padding: 38px;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 .modal .icon_correct {
   width: 14%;
@@ -133,15 +148,14 @@ form #button:hover {
 .modal .info_confimation {
   margin-top: 10px;
 }
-
-.footer_modal {
+.modal .footer_modal {
   margin-top: 25px;
   display: flex;
   align-items: center;
   text-align: center;
   justify-content: center;
 }
-.footer_modal .button_24 {
+.modal .button_24 {
   background: #FF4742;
   border: 1px solid #FF4742;
   border-radius: 6px;
@@ -165,12 +179,12 @@ form #button:hover {
   vertical-align: middle;
   transition: 0.5s;
 }
-.footer_modal .button_24:hover, .footer_modal .button_24:active {
+.modal .button_24:hover, .modal .button_24:active {
   background-color: initial;
   background-position: 0 0;
   color: #FF4742;
 }
-.footer_modal .button_24:active {
+.modal .button_24:active {
   opacity: 0.8;
 }
 
@@ -230,6 +244,12 @@ form #button:hover {
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 15px 15px 0px 0px;
+  }
+  .modal {
+    width: 290px;
+  }
+  .modal .title_thanks {
+    font-size: 36px;
   }
 }
 @media screen and (max-width: 393px) {
